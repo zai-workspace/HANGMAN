@@ -39,7 +39,7 @@ HANGMAN_PICS = ['''
  / \\  |
      ===''']
 
-def load_words_from_file(file_path='words_alpha.txt'):
+def load_words_from_file(file_path='word_list.txt'):
     """
     Load words from a given file and return a list of uppercase words.
     Only includes words that are purely alphabetical and in lowercase.
@@ -123,7 +123,7 @@ def main():
     """
     Main function to manage game sessions and replay options.
     """
-    default_path = 'words_alpha.txt'
+    default_path = 'word_list.txt'
     use_default = input(f"Do you want to use the default word list ('{default_path}')? (Y/N): ").upper()
     if use_default == 'Y':
         word_list = load_words_from_file(default_path)
